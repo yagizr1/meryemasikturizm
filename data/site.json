@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "title": "Meryem Aşık Turizm | Hac ve Umre Turları"
+  },
+  "brand": {
+    "name": "Meryem Aşık",
+    "tagline": "Turizm & Hac Organizasyon",
+    "phoneNav": "0539 511 36 26",
+    "phoneContact": "+90 539 511 36 26",
+    "phoneDigits": "905395113626",
+    "whatsappDigits": "905395113626",
+    "email": "bilgi@meryemasikturizm.com",
+    "address": "Hürriyet Cad. No: 145/A Fatih / İstanbul",
+    "footerText": "Hac, umre ve kültür turlarınızda güvenin, huzurun ve tecrübenin buluştuğu adres.",
+    "logo": "img/logo.jpg",
+    "logo2": "img/logo2.png"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/p/Meryem-A%C5%9F%C4%B1k-Tur-61590612466033/",
+    "instagram": "https://www.instagram.com/meryemasikturizm/",
+    "whatsapp": "https://wa.me/905395113626"
+  },
+  "nav": [
+    {
+      "label": "Anasayfa",
+      "href": "#anasayfa"
+    },
+    {
+      "label": "Hakkımızda",
+      "href": "#hakkimizda"
+    },
+    {
+      "label": "Turlarımız",
+      "href": "#turlar"
+    },
+    {
+      "label": "Neden Biz",
+      "href": "#neden-biz"
+    },
+    {
+      "label": "SSS",
+      "href": "#sss"
+    },
+    {
+      "label": "Yorumlar",
+      "href": "#yorumlar"
+    },
+    {
+      "label": "İletişim",
+      "href": "#iletisim"
+    }
+  ],
+  "cta": {
+    "desktop": "Kayıt Ol",
+    "mobile": "Hemen Kayıt Ol",
+    "href": "#iletisim"
+  },
+  "hero": {
+    "bgImage": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1920&q=80",
+    "titleBefore": "Kutsal Topraklara ",
+    "titleHighlight": "Güvenli ve Huzurlu",
+    "titleAfter": " Yolculuk",
+    "subtitle": "Yılların tecrübesi, lüks konaklama seçenekleri ve ehil hocalarımız eşliğinde ömrünüzün en unutulmaz manevi iklimini yaşayın.",
+    "primaryText": "Turlarımızı İnceleyin",
+    "primaryHref": "#turlar",
+    "secondaryText": "WhatsApp Bilgi Hattı",
+    "stat1Value": "4.9 / 5",
+    "stat1Label": "Google Puanı",
+    "stat2Value": "%100",
+    "stat2Label": "Güven & Memnuniyet",
+    "stat3Value": "7/24",
+    "stat3Label": "Canlı Destek",
+    "stat4Value": "A Grubu",
+    "stat4Label": "TÜRSAB Üyesi"
+  },
+  "about": {
+    "title": "Meryem Aşık Turizm ile Manevi Huzur",
+    "p1": "Kurulduğumuz günden bu yana hac ve umre ibadetini yerine getirmek isteyen misafirlerimize en yüksek kalitede hizmet sunmayı ilke edindik. Yolculuğun başlangıcından kutsal topraklardaki her anınıza kadar tecrübeli kadromuzla yanınızdayız.",
+    "p2": "Amacımız sadece bir seyahat organize etmek değil; misafirlerimizin bu mübarek topraklarda zihin ve gönül rahatlığıyla ibadet edebilmelerini sağlamaktır.",
+    "f1": "Resmi TURSAB Üyesi",
+    "f2": "Deneyimli Kadro",
+    "video": "mt79po.mp4"
+  },
+  "toursSection": {
+    "title": "Öne Çıkan Tur Paketlerimiz",
+    "subtitle": "Her bütçe ve konfor beklentisine uygun, özenle planlanmış hac, umre ve kültür turlarımızı keşfedin."
+  },
+  "tours": [
+    {
+      "image": "img/luks-umre.jpg",
+      "imageAlt": "Lüks Umre Turu",
+      "badge": "Popüler",
+      "badgeTone": "gold",
+      "duration": "10 Gün / 9 Gece",
+      "location": "Mekke & Medine",
+      "title": "Lüks 5 Yıldızlı Umre Turu",
+      "description": "Harem-i Şerif'e yürüme mesafesinde 5 yıldızlı otellerde konaklama, VIP transferler ve özel ilim sohbetleri.",
+      "flight": "Türk Hava Yolları",
+      "hotel": "Hilton / Pullman",
+      "meal": "Açık Büfe (Sabah-Akşam)",
+      "price": "$1.450"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Ekonomik Umre Turu",
+      "badge": "Avantajlı",
+      "badgeTone": "green",
+      "duration": "14 Gün / 13 Gece",
+      "location": "Mekke & Medine",
+      "title": "Ekonomik Umre Paketi",
+      "description": "İbadetinize tam odaklanabileceğiniz, bütçe dostu, temiz ve konforlu 4 yıldızlı otel konaklamalı paket.",
+      "flight": "Tarifeli Seferler",
+      "hotel": "4 Yıldızlı Oteller",
+      "meal": "Yarım Pansiyon",
+      "price": "$1.100"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Kudüs ve Umre Turu",
+      "badge": "Özel Tur",
+      "badgeTone": "gold",
+      "duration": "12 Gün / 11 Gece",
+      "location": "Kudüs, Mekke & Medine",
+      "title": "3 Harem (Kudüs & Umre)",
+      "description": "İlk kıblemiz Mescid-i Aksa ziyareti ile başlayan, Mekke ve Medine'de devam eden müstesna bir manevi rota.",
+      "flight": "Direkt Seferler",
+      "hotel": "Seçkin Oteller",
+      "meal": "Tam Pansiyon",
+      "price": "$1.850"
+    }
+  ],
+  "hotelsSection": {
+    "badge": "Konforlu Dinlenme",
+    "title": "Anlaşmalı Lüks Otellerimiz",
+    "subtitle": "Mekke ve Medine'de ibadetinizi huzurla yapabilmeniz için seçtiğimiz seçkin otellerimiz."
+  },
+  "hotels": [
+    {
+      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Mekke Otel",
+      "city": "Mekke-i Mükerreme",
+      "stars": 5,
+      "title": "Swissôtel Makkah",
+      "description": "Abraj Al Bait kompleksinde yer alan, Kabe manzaralı lüks odalar ve üstün hizmet kalitesi."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Medine Otel",
+      "city": "Medine-i Münevvere",
+      "stars": 5,
+      "title": "Pullman Zamzam Madina",
+      "description": "Mescid-i Nebevi'ye sadece birkaç adım mesafede, huzurlu ve modern tasarımlı odalar."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Konfor Otel",
+      "city": "Merkezi Konum",
+      "stars": 4,
+      "title": "Dar Al Taqwa Hotel",
+      "description": "Medine'nin kalbinde, ibadet alanlarına doğrudan geçiş imkanı sunan seçkin otel deneyimi."
+    }
+  ],
+  "reasonsSection": {
+    "badge": "Güvenilir Rehberlik",
+    "title": "Neden Meryem Aşık Turizm?",
+    "subtitle": "Kutsal yolculuğunuzun her anında huzur ve konforunuz için titizlikle çalışıyoruz."
+  },
+  "reasons": [
+    {
+      "icon": "fa-shield-halved",
+      "title": "Güvenilirlik & Lisans",
+      "text": "TÜRSAB onaylı A grubu seyahat acentası güvencesiyle resmi ve sorunsuz organizasyonlar."
+    },
+    {
+      "icon": "fa-chalkboard-user",
+      "title": "Ehil Rehberler",
+      "text": "Alanında uzman ilim insanları ve tecrübeli hocalarımız eşliğinde bilinçli ibadet imkanı."
+    },
+    {
+      "icon": "fa-hotel",
+      "title": "Seçkin Konaklama",
+      "text": "Mescid-i Haram ve Mescid-i Nebevi'ye yakın, konforlu ve hijyenik otellerde dinlenme fırsatı."
+    },
+    {
+      "icon": "fa-headset",
+      "title": "7/24 Canlı Destek",
+      "text": "Yolculuk öncesinden Türkiye’ye dönüşünüze kadar her aşamada yanınızda olan destek ekibi."
+    }
+  ],
+  "gallerySection": {
+    "title": "Galeri",
+    "subtitle": ""
+  },
+  "gallery": [
+    {
+      "src": "img/1.jpg",
+      "caption": "12 Kasım çıkışlı 14 günlük umre"
+    },
+    {
+      "src": "img/2.jpg",
+      "caption": "14 Ekim çıkışlı 10 günlük umre turu"
+    },
+    {
+      "src": "img/il72h8.jpg",
+      "caption": "27 Kasım çıkışlı umre turu"
+    },
+    {
+      "src": "img/u3w8we.jpg",
+      "caption": "Sakarya Rizeliler Derneği iş birliği"
+    }
+  ],
+  "faqSection": {
+    "badge": "Merak Edilenler",
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Hac ve umre turlarımız hakkında misafirlerimizden en sık aldığımız sorular ve yanıtları."
+  },
+  "faqs": [
+    {
+      "question": "Umre vizesi için hangi evraklar gereklidir?",
+      "answer": "Umre vizesi için en az 1 yıl geçerli pasaport, biyometrik fotoğraf ve aşı kartı yeterlidir. Vize işlemleri secentamız tarafından profesyonelce yürütülmekte olup, sizden sadece evraklarınızı ofisimize ulaştırmanız istenmektedir."
+    },
+    {
+      "question": "Otellerimiz Harem-i Şerif'e ne kadar uzaklıkta?",
+      "answer": "Paketlerimize bağlı olarak otellerimiz Mekke'de Kabe'ye yürüme mesafesinde (veya klimalı shuttle servis imkanı olan) ve Medine'de Mescid-i Nebevi'nin hemen yanında yer almaktadır. Detaylar tur programlarımızda açıkça belirtilmektedir."
+    },
+    {
+      "question": "Tur boyunca rehberlik hizmeti veriliyor mu?",
+      "answer": "Evet, Türkiye'den hareketimizden itibaren deneyirli din görevlileri ve tur rehberlerimiz tüm ibadetlerinizde (umre, tavaf, sa'y vb.) ve tarihi mekan ziyaretlerinizde birebir yanınızda rehberlik etmektedir."
+    },
+    {
+      "question": "Ödeme ve taksit imkanları nelerdir?",
+      "answer": "Kredi kartlarına anlaşmalı bankalar aracılığıyla taksit imkanlarımız mevcuttur. Ayrıca erken kayıt dönemlerinde özel indirimler ve nakit ödeme kolaylıkları sunulmaktadır."
+    },
+    {
+      "question": "Çocuklu aileler için özel indirimler var mı?",
+      "answer": "Evet, yaş gruplarına göre bebek ve çocuk misafirlerimiz için özel indirimli fiyat tarifelerimiz uygulanmaktadır. Detaylı bilgi için müşteri temsilcilerimizle görüşebilirsiniz."
+    }
+  ],
+  "reviewsSection": {
+    "badge": "Misafir Deneyimleri",
+    "title": "Google İşletme Yorumları",
+    "subtitle": "Kutsal topraklara bizimle giden misafirlerimizin gerçek Google değerlendirmeleri.",
+    "score": "4.9 / 5.0",
+    "count": "350+ Google Değerlendirmesi"
+  },
+  "reviews": [
+    {
+      "initials": "İA",
+      "name": "İbrahim Aksoy",
+      "meta": "Google Yorumcusu • 2 ay önce",
+      "stars": 5,
+      "text": "Meryem Aşık Turizm ile ilk kez umreye gittim. Havalimanı karşılamasından otel yerleşimine, hocalarımızın ilmi sohbetlerinden rehberliğe kadar her şey kusursuzdu. Allah razı olsun."
+    },
+    {
+      "initials": "ZŞ",
+      "name": "Zeynep Şahin",
+      "meta": "Google Yorumcusu • 4 ay önce",
+      "stars": 5,
+      "text": "Annem ve babam için 5 yıldızlı umre turunu tercih ettik. Otellerin Kabe'ye ve Mescid-i Nebevi'ye yakınlığı yaşlı anne babam için inanılmaz kolaylık sağladı. Kesinlikle tavsiye ederim."
+    },
+    {
+      "initials": "MK",
+      "name": "Mehmet Kaya",
+      "meta": "Google Yorumcusu • 6 ay önce",
+      "stars": 5,
+      "text": "Ekip o kadar ilgiliydi ki her sorumuza anında yanıt bulduk. Özellikle hocalarımızın tavırları ve manevi rehberlikleri yolculuğumuzu çok daha anlamlı kıldı. Teşekkürler Meryem Aşık Turizm."
+    }
+  ],
+  "contact": {
+    "badge": "Bize Ulaşın",
+    "title": "Kutsal Yolculuğunuz İçin İlk Adımı Atın",
+    "subtitle": "Sorularınız, tur paketlerimiz ve erken kayıt avantajları hakkında bilgi almak için bizimle iletişime geçin.",
+    "officeTitle": "Merkez Ofis",
+    "phoneTitle": "Telefon / WhatsApp",
+    "emailTitle": "E-Posta",
+    "formTitle": "Bilgi & Kayıt Formu",
+    "extraTours": [
+      "Hac Organizasyonu"
+    ]
+  },
+  "footer": {
+    "quickTitle": "Hızlı Linkler",
+    "toursTitle": "Tur Paketleri",
+    "tours": [
+      {
+        "label": "Lüks Umre Turu",
+        "href": "#turlar"
+      },
+      {
+        "label": "Ekonomik Umre Paketi",
+        "href": "#turlar"
+      },
+      {
+        "label": "Kudüs & Umre Turu",
+        "href": "#turlar"
+      },
+      {
+        "label": "Özel Hac Programı",
+        "href": "#turlar"
+      }
+    ],
+    "legalTitle": "Yasal & Güven",
+    "legalText": "TÜRSAB A Grubu Seyahat Acentası Belge No: 14376. Tüm hac ve umre organizasyonlarımız Diyanet İşleri Başkanlığı denetimindedir.",
+    "certified": "Resmi Onaylı Acenta",
+    "copyright": "© 2026 Meryem Aşık Turizm. Tüm hakları saklıdır.",
+    "creditBefore": "Bu web sitesi ",
+    "creditName": "Dark Media Agency",
+    "creditAfter": " tarafından hazırlanmıştır.",
+    "links": [
+      {
+        "label": "Gizlilik Politikası",
+        "href": "#"
+      },
+      {
+        "label": "Kullanım Şartları",
+        "href": "#"
+      },
+      {
+        "label": "KVKK",
+        "href": "#"
+      }
+    ]
+  }
+}

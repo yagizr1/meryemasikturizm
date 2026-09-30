@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meryem Aşık Turizm | Hac ve Umre Turları</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldBrand: {
+                            DEFAULT: '#1b4332',
+                            dark: '#081c15',
+                            light: '#2d6a4f',
+                            pale: '#e8f5e9'
+                        },
+                        goldBrand: {
+                            DEFAULT: '#d4af37',
+                            light: '#f3e5ab',
+                            dark: '#aa8c2c'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Amiri', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Poppins & Amiri -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(8, 28, 21, 0.75), rgba(27, 67, 50, 0.85)), url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem;
+            max-width: 34rem;
+            margin: 0.15rem auto 0;
+        }
+        .hero-stat {
+            position: relative;
+            overflow: hidden;
+            padding: 0.65rem 0.6rem 0.55rem;
+            border-radius: 1.15rem;
+            background: linear-gradient(165deg, rgba(255, 255, 255, 0.12), rgba(8, 28, 21, 0.62));
+            border: 1px solid rgba(212, 175, 55, 0.38);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(14px);
+        }
+        .hero-stat::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 16%;
+            right: 16%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #f3e5ab, #d4af37, transparent);
+        }
+        .hero-stat-value {
+            font-family: 'Amiri', serif;
+            font-weight: 700;
+            font-size: 1.65rem;
+            line-height: 1;
+            background: linear-gradient(180deg, #fff8df 10%, #d4af37 85%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-stat-stars,
+        .hero-stat-mark {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 0.95rem;
+            margin: 0.38rem 0 0.28rem;
+            color: #d4af37;
+        }
+        .hero-stat-stars { gap: 0.2rem; font-size: 0.62rem; }
+        .hero-stat-mark { font-size: 0.82rem; }
+        .hero-stat-foot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.64rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            line-height: 1.25;
+        }
+        .hero-stat-foot i { color: #f3e5ab; font-size: 0.72rem; }
+        #anasayfa .hero-scroll {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.15rem;
+            margin-top: 0.7rem;
+            color: rgba(243, 229, 171, 0.95);
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        @media (min-height: 780px) {
+            #anasayfa .hero-scroll { margin-top: 1.55rem; }
+        }
+        .hero-scroll i {
+            font-size: 0.85rem;
+            animation: heroScroll 1.35s ease-in-out infinite;
+        }
+        @keyframes heroScroll {
+            0%, 100% { transform: translateY(0); opacity: 0.45; }
+            50% { transform: translateY(5px); opacity: 1; }
+        }
+        @media (min-width: 640px) {
+            .hero-stats { gap: 0.9rem; }
+            .hero-stat { padding: 1rem 0.85rem 0.85rem; }
+            .hero-stat-value { font-size: 2.05rem; }
+            .hero-stat-foot { font-size: 0.74rem; }
+        }
+        @media (min-width: 1024px) {
+            .hero-stats {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                max-width: 64rem;
+                gap: 0.85rem;
+            }
+        }
+        .about-video {
+            width: fit-content;
+            max-width: 100%;
+            background: transparent;
+            line-height: 0;
+        }
+        .about-video video {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 520px;
+            background: transparent;
+        }
+        section[id] { scroll-margin-top: 4.5rem; }
+        @media (min-width: 1024px) {
+            section[id] { scroll-margin-top: 5.5rem; }
+        }
+        .m-slider-wrap { position: relative; }
+        .m-slider-btn,
+        .m-slider-dots { display: none; }
+        .m-slider-btn {
+            position: absolute;
+            top: 42%;
+            z-index: 2;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 999px;
+            background: #fff;
+            color: #1b4332;
+            border: 1px solid rgba(212, 175, 55, 0.55);
+            box-shadow: 0 8px 18px rgba(8, 28, 21, 0.16);
+            align-items: center;
+            justify-content: center;
+        }
+        .m-slider-btn:disabled { opacity: 0.35; }
+        .m-slider-prev { left: 0.15rem; }
+        .m-slider-next { right: 0.15rem; }
+        .m-slider-dots {
+            justify-content: center;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.85rem;
+        }
+        .m-slider-dots button {
+            width: 0.45rem;
+            height: 0.45rem;
+            border-radius: 999px;
+            background: rgba(27, 67, 50, 0.28);
+            transition: width 0.2s ease, background 0.2s ease;
+        }
+        .m-slider-dots button.is-active {
+            width: 1.15rem;
+            background: #d4af37;
+        }
+        .m-slider-wrap[data-tone="dark"] .m-slider-dots button { background: rgba(255, 255, 255, 0.35); }
+        .m-slider-wrap[data-tone="dark"] .m-slider-dots button.is-active { background: #d4af37; }
+        #mobile-menu {
+            max-height: calc(100dvh - 4rem);
+            overflow-y: auto;
+            padding: 0.9rem 1rem 1.15rem;
+            background:
+                radial-gradient(120% 70% at 100% 0%, rgba(212, 175, 55, 0.18), transparent 48%),
+                #081c15;
+            border-top: 1px solid rgba(212, 175, 55, 0.28);
+            animation: mobileMenuIn 0.22s ease;
+        }
+        @keyframes mobileMenuIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: none; }
+        }
+        #mobile-menu .mobile-nav { display: flex; flex-direction: column; gap: 0.45rem; }
+        #mobile-menu .mobile-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 0.85rem 0.95rem;
+            border-radius: 0.95rem;
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        #mobile-menu .mobile-link i { color: #d4af37; font-size: 0.72rem; }
+        #mobile-menu .mobile-link:active {
+            background: rgba(212, 175, 55, 0.16);
+            color: #f3e5ab;
+        }
+        .mobile-menu-actions {
+            margin-top: 0.85rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.22);
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+        .mobile-contact {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.7rem 0.85rem;
+            border-radius: 0.95rem;
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.28);
+            color: #fff;
+        }
+        .mobile-contact small {
+            display: block;
+            color: rgba(243, 229, 171, 0.72);
+            font-size: 0.68rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .mobile-contact strong { font-size: 0.95rem; font-weight: 600; }
+        .mobile-contact-icon {
+            width: 2.15rem;
+            height: 2.15rem;
+            border-radius: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 175, 55, 0.16);
+            color: #d4af37;
+            flex-shrink: 0;
+        }
+        .mobile-contact.wa {
+            background: rgba(37, 211, 102, 0.08);
+            border-color: rgba(37, 211, 102, 0.28);
+        }
+        .mobile-contact.wa .mobile-contact-icon {
+            background: rgba(37, 211, 102, 0.16);
+            color: #5dffa0;
+        }
+        @media (max-width: 767px) {
+            #anasayfa { padding-bottom: 0.65rem; }
+            section.py-20 { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+            section .mb-16, #yorumlar .mb-12 { margin-bottom: 1.75rem; }
+            footer.pt-16 { padding-top: 2.75rem; }
+            h1, h2 { text-wrap: balance; }
+            section h2.text-3xl { font-size: 1.85rem; line-height: 1.25; }
+            .about-points > div { padding: 0.7rem 0.65rem; }
+            .about-points > div > * + * { margin-left: 0.45rem; }
+            .about-points > div > div:first-child { width: 2rem; height: 2rem; flex-shrink: 0; border-radius: 0.6rem; }
+            #faq-list button { align-items: flex-start; gap: 0.75rem; padding: 1rem 1.05rem; }
+            #faq-list button > span { min-width: 0; align-items: flex-start; line-height: 1.45; }
+            #faq-list button > i { margin-top: 0.28rem; flex-shrink: 0; }
+            .m-slider-btn,
+            .m-slider-dots { display: flex; }
+            .m-slider {
+                display: flex;
+                gap: 0.85rem;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-padding-inline: 7%;
+                -webkit-overflow-scrolling: touch;
+                overscroll-behavior-x: contain;
+                scrollbar-width: none;
+                padding: 0.35rem 0.15rem 1.15rem;
+            }
+            .m-slider::-webkit-scrollbar { display: none; }
+            .m-slider > * {
+                flex: 0 0 86%;
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
+                min-width: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-goldBrand selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-emeraldBrand-dark/95 backdrop-blur-md text-white border-b border-goldBrand/20 shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-full gold-gradient flex items-center justify-center text-emeraldBrand-dark shadow-md group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-kaaba text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-serif font-bold tracking-wide text-white" data-cms="brand.name">Meryem Aşık</span>
+                    <span class="hidden xl:block text-xs uppercase tracking-widest text-goldBrand font-medium" data-cms="brand.tagline">Turizm & Hac Organizasyon</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav id="desktop-nav" class="hidden lg:flex items-center flex-nowrap shrink-0 gap-x-3 xl:gap-x-5 font-medium text-[13px] xl:text-sm whitespace-nowrap">
+                <a href="#anasayfa" class="hover:text-goldBrand transition-colors whitespace-nowrap">Anasayfa</a>
+                <a href="#hakkimizda" class="hover:text-goldBrand transition-colors whitespace-nowrap">Hakkımızda</a>
+                <a href="#turlar" class="hover:text-goldBrand transition-colors whitespace-nowrap">Turlarımız</a>
+                <a href="#neden-biz" class="hover:text-goldBrand transition-colors whitespace-nowrap">Neden Biz</a>
+                <a href="#sss" class="hover:text-goldBrand transition-colors whitespace-nowrap">SSS</a>
+                <a href="#yorumlar" class="hover:text-goldBrand transition-colors whitespace-nowrap">Yorumlar</a>
+                <a href="#iletisim" class="hover:text-goldBrand transition-colors whitespace-nowrap">İletişim</a>
+            </nav>
+
+            <!-- Quick Action / CTA -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="tel:+905395113626" data-cms-tel class="flex items-center space-x-2 text-goldBrand hover:text-white transition-colors text-sm font-semibold whitespace-nowrap">
+                    <div class="w-9 h-9 rounded-full bg-goldBrand/20 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="hidden xl:inline" data-cms="brand.phoneNav">0539 511 36 26</span>
+                </a>
+                <a href="#iletisim" data-cms-href="cta.href" data-cms="cta.desktop" class="gold-gradient text-emeraldBrand-dark px-5 py-2.5 rounded-full font-bold text-sm shadow-md hover:opacity-90 transition-opacity">
+                    Kayıt Ol
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none w-11 h-11 rounded-full border border-goldBrand/30 flex items-center justify-center" aria-label="Menüyü aç" aria-expanded="false">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden shadow-xl">
+            <nav class="mobile-nav">
+                <a href="#anasayfa" class="mobile-link"><span class="mobile-link-label">Anasayfa</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#hakkimizda" class="mobile-link"><span class="mobile-link-label">Hakkımızda</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#turlar" class="mobile-link"><span class="mobile-link-label">Turlarımız</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#neden-biz" class="mobile-link"><span class="mobile-link-label">Neden Biz</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#sss" class="mobile-link"><span class="mobile-link-label">SSS</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#yorumlar" class="mobile-link"><span class="mobile-link-label">Yorumlar</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#iletisim" class="mobile-link"><span class="mobile-link-label">İletişim</span><i class="fa-solid fa-chevron-right"></i></a>
+            </nav>
+            <div class="mobile-menu-actions">
+                <a href="tel:+905395113626" data-cms-tel class="mobile-contact">
+                    <span class="mobile-contact-icon"><i class="fa-solid fa-phone"></i></span>
+                    <span>
+                        <small>Bizi arayın</small>
+                        <strong data-cms="brand.phoneNav">0539 511 36 26</strong>
+                    </span>
+                </a>
+                <a href="https://wa.me/905395113626" data-cms-wa target="_blank" rel="noopener" class="mobile-contact wa">
+                    <span class="mobile-contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                    <span>
+                        <small>Hızlı yazın</small>
+                        <strong>WhatsApp</strong>
+                    </span>
+                </a>
+                <a href="#iletisim" data-cms-href="cta.href" data-cms="cta.mobile" class="gold-gradient text-center text-emeraldBrand-dark py-3.5 rounded-xl font-bold shadow-md">
+                    Hemen Kayıt Ol
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero-bg h-[100dvh] max-h-[100dvh] overflow-hidden flex items-center justify-center text-white pt-16 lg:pt-20 pb-6 px-5 relative">
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10 w-full space-y-2 sm:space-y-5">
+            <h1 class="text-[2.25rem] sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight leading-tight">
+                <span data-cms="hero.titleBefore">Kutsal Topraklara </span><span class="gold-text-gradient" data-cms="hero.titleHighlight">Güvenli ve Huzurlu</span><span data-cms="hero.titleAfter"> Yolculuk</span>
+            </h1>
+            
+            <p class="text-[17.5px] sm:text-lg text-white/90 max-w-2xl mx-auto font-light leading-relaxed" data-cms="hero.subtitle">
+                Yılların tecrübesi, lüks konaklama seçenekleri ve ehil hocalarımız eşliğinde ömrünüzün en unutulmaz manevi iklimini yaşayın.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-1 sm:pt-2">
+                <a href="#turlar" data-cms-href="hero.primaryHref" class="w-full sm:w-auto gold-gradient text-emeraldBrand-dark font-bold px-8 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                    <span data-cms="hero.primaryText">Turlarımızı İnceleyin</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://wa.me/905395113626" data-cms-wa target="_blank" rel="noopener" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md font-semibold px-8 py-3 sm:py-4 rounded-full transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-green-400 text-xl"></i>
+                    <span data-cms="hero.secondaryText">WhatsApp Bilgi Hattı</span>
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats pt-1 sm:pt-4 text-center">
+                <div class="hero-stat">
+                    <div class="hero-stat-value" data-cms="hero.stat1Value">4.9 / 5</div>
+                    <div class="hero-stat-stars" aria-hidden="true">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="hero-stat-foot">
+                        <i class="fa-brands fa-google" aria-hidden="true"></i>
+                        <span data-cms="hero.stat1Label">Google Puanı</span>
+                    </div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value" data-cms="hero.stat2Value">%100</div>
+                    <div class="hero-stat-mark" aria-hidden="true"><i class="fa-solid fa-shield-heart"></i></div>
+                    <div class="hero-stat-foot">
+                        <span data-cms="hero.stat2Label">Güven & Memnuniyet</span>
+                    </div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value" data-cms="hero.stat3Value">7/24</div>
+                    <div class="hero-stat-mark" aria-hidden="true"><i class="fa-solid fa-headset"></i></div>
+                    <div class="hero-stat-foot">
+                        <span data-cms="hero.stat3Label">Canlı Destek</span>
+                    </div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value" data-cms="hero.stat4Value">A Grubu</div>
+                    <div class="hero-stat-mark" aria-hidden="true"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="hero-stat-foot">
+                        <span data-cms="hero.stat4Label">TÜRSAB Üyesi</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#hakkimizda" class="hero-scroll">
+                <span>Sitenin devamı için aşağı kaydırın</span>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="py-20 bg-emeraldBrand-pale/60 border-y border-emeraldBrand/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-emeraldBrand-dark leading-tight text-center lg:text-left" data-cms="about.title">Meryem Aşık Turizm ile Manevi Huzur</h2>
+                    <p class="text-gray-700 leading-relaxed text-base text-center lg:text-left" data-cms="about.p1">
+                        Kurulduğumuz günden bu yana hac ve umre ibadetini yerine getirmek isteyen misafirlerimize en yüksek kalitede hizmet sunmayı ilke edindik. Yolculuğun başlangıcından kutsal topraklardaki her anınıza kadar tecrübeli kadromuzla yanınızdayız.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-base text-center lg:text-left" data-cms="about.p2">
+                        Amacımız sadece bir seyahat organize etmek değil; misafirlerimizin bu mübarek topraklarda zihin ve gönül rahatlığıyla ibadet edebilmelerini sağlamaktır.
+                    </p>
+                    <div class="about-points grid grid-cols-2 gap-3 sm:gap-4 pt-2">
+                        <div class="flex items-center space-x-3 bg-white p-4 rounded-2xl shadow-sm border border-gray-100 min-w-0">
+                            <div class="w-10 h-10 rounded-xl bg-emeraldBrand text-goldBrand flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="font-semibold text-gray-800 text-sm min-w-0 leading-snug" data-cms="about.f1">Resmi TURSAB Üyesi</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white p-4 rounded-2xl shadow-sm border border-gray-100 min-w-0">
+                            <div class="w-10 h-10 rounded-xl bg-emeraldBrand text-goldBrand flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="font-semibold text-gray-800 text-sm min-w-0 leading-snug" data-cms="about.f2">Deneyimli Kadro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="about-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <video controls playsinline preload="metadata" aria-label="Meryem Aşık Turizm tanıtım videosu">
+                            <source src="mt79po.mp4" data-cms-src="about.video" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Öne Çıkan Turlar -->
+    <section id="turlar" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-emeraldBrand-dark" data-cms="toursSection.title">Öne Çıkan Tur Paketlerimiz</h2>
+            <p class="text-gray-600 mt-4 text-base sm:text-lg" data-cms="toursSection.subtitle">Her bütçe ve konfor beklentisine uygun, özenle planlanmış hac, umre ve kültür turlarımızı keşfedin.</p>
+        </div>
+
+        <div class="m-slider-wrap" data-slider>
+            <button type="button" class="m-slider-btn m-slider-prev" data-slider-prev aria-label="Önceki"><i class="fa-solid fa-chevron-left"></i></button>
+            <div id="tour-grid" class="m-slider md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8" data-slider-track>
+            
+            <!-- Tour Card 1 -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="img/luks-umre.jpg" alt="Lüks Umre Turu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 gold-gradient text-emeraldBrand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+                            Popüler
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-lg">
+                            <i class="fa-solid fa-clock mr-1 text-goldBrand"></i> 10 Gün / 9 Gece
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase font-bold tracking-wider text-emeraldBrand">Mekke & Medine</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900 mt-1">Lüks 5 Yıldızlı Umre Turu</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">Harem-i Şerif'e yürüme mesafesinde 5 yıldızlı otellerde konaklama, VIP transferler ve özel ilim sohbetleri.</p>
+                        
+                        <div class="mt-6 space-y-2 border-t border-gray-100 pt-4 text-sm text-gray-600">
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-plane-departure text-emeraldBrand mr-2 w-5"></i> Uçuş:</span>
+                                <span class="font-semibold text-gray-800">Türk Hava Yolları</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-hotel text-emeraldBrand mr-2 w-5"></i> Konaklama:</span>
+                                <span class="font-semibold text-gray-800">Hilton / Pullman</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-utensils text-emeraldBrand mr-2 w-5"></i> Yemek:</span>
+                                <span class="font-semibold text-gray-800">Açık Büfe (Sabah-Akşam)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-gray-50 mt-4">
+                    <div>
+                        <span class="text-xs text-gray-400 block">Kişi başı başlayan</span>
+                        <span class="text-2xl font-bold text-emeraldBrand font-serif">$1.450</span>
+                    </div>
+                    <button onclick="openModal('Lüks 5 Yıldızlı Umre Turu')" class="bg-emeraldBrand hover:bg-emeraldBrand-dark text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md transition-colors">
+                        Kayıt Ol / Bilgi Al
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tour Card 2 -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Ekonomik Umre Turu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1b4332/d4af37?text=Ekonomik+Umre'">
+                        <div class="absolute top-4 right-4 bg-emeraldBrand text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+                            Avantajlı
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-lg">
+                            <i class="fa-solid fa-clock mr-1 text-goldBrand"></i> 14 Gün / 13 Gece
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase font-bold tracking-wider text-emeraldBrand">Mekke & Medine</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900 mt-1">Ekonomik Umre Paketi</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">İbadetinize tam odaklanabileceğiniz, bütçe dostu, temiz ve konforlu 4 yıldızlı otel konaklamalı paket.</p>
+                        
+                        <div class="mt-6 space-y-2 border-t border-gray-100 pt-4 text-sm text-gray-600">
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-plane-departure text-emeraldBrand mr-2 w-5"></i> Uçuş:</span>
+                                <span class="font-semibold text-gray-800">Tarifeli Seferler</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-hotel text-emeraldBrand mr-2 w-5"></i> Konaklama:</span>
+                                <span class="font-semibold text-gray-800">4 Yıldızlı Oteller</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-utensils text-emeraldBrand mr-2 w-5"></i> Yemek:</span>
+                                <span class="font-semibold text-gray-800">Yarım Pansiyon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-gray-50 mt-4">
+                    <div>
+                        <span class="text-xs text-gray-400 block">Kişi başı başlayan</span>
+                        <span class="text-2xl font-bold text-emeraldBrand font-serif">$1.100</span>
+                    </div>
+                    <button onclick="openModal('Ekonomik Umre Paketi')" class="bg-emeraldBrand hover:bg-emeraldBrand-dark text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md transition-colors">
+                        Kayıt Ol / Bilgi Al
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tour Card 3 -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Kudüs ve Umre Turu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1b4332/d4af37?text=Kudus+Turu'">
+                        <div class="absolute top-4 right-4 gold-gradient text-emeraldBrand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+                            Özel Tur
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-lg">
+                            <i class="fa-solid fa-clock mr-1 text-goldBrand"></i> 12 Gün / 11 Gece
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs uppercase font-bold tracking-wider text-emeraldBrand">Kudüs, Mekke & Medine</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900 mt-1">3 Harem (Kudüs & Umre)</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">İlk kıblemiz Mescid-i Aksa ziyareti ile başlayan, Mekke ve Medine'de devam eden müstesna bir manevi rota.</p>
+                        
+                        <div class="mt-6 space-y-2 border-t border-gray-100 pt-4 text-sm text-gray-600">
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-plane-departure text-emeraldBrand mr-2 w-5"></i> Uçuş:</span>
+                                <span class="font-semibold text-gray-800">Direkt Seferler</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-hotel text-emeraldBrand mr-2 w-5"></i> Konaklama:</span>
+                                <span class="font-semibold text-gray-800">Seçkin Oteller</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center"><i class="fa-solid fa-utensils text-emeraldBrand mr-2 w-5"></i> Yemek:</span>
+                                <span class="font-semibold text-gray-800">Tam Pansiyon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex flex-wrap items-center justify-between gap-3 border-t border-gray-50 mt-4">
+                    <div>
+                        <span class="text-xs text-gray-400 block">Kişi başı başlayan</span>
+                        <span class="text-2xl font-bold text-emeraldBrand font-serif">$1.850</span>
+                    </div>
+                    <button onclick="openModal('3 Harem (Kudüs & Umre)')" class="bg-emeraldBrand hover:bg-emeraldBrand-dark text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md transition-colors">
+                        Kayıt Ol / Bilgi Al
+                    </button>
+                </div>
+            </div>
+
+            </div>
+            <button type="button" class="m-slider-btn m-slider-next" data-slider-next aria-label="Sonraki"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="m-slider-dots" data-slider-dots></div>
+        </div>
+    </section>
+
+    <!-- Otellerimiz & Konaklama -->
+    <section id="oteller" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-emeraldBrand font-semibold tracking-wider text-sm uppercase bg-emeraldBrand-pale px-3 py-1 rounded-full" data-cms="hotelsSection.badge">Konforlu Dinlenme</span>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-emeraldBrand-dark mt-3" data-cms="hotelsSection.title">Anlaşmalı Lüks Otellerimiz</h2>
+            <p class="text-gray-600 mt-4 text-base sm:text-lg" data-cms="hotelsSection.subtitle">Mekke ve Medine'de ibadetinizi huzurla yapabilmeniz için seçtiğimiz seçkin otellerimiz.</p>
+        </div>
+
+        <div class="m-slider-wrap" data-slider>
+            <button type="button" class="m-slider-btn m-slider-prev" data-slider-prev aria-label="Önceki"><i class="fa-solid fa-chevron-left"></i></button>
+            <div id="hotel-grid" class="m-slider md:grid md:grid-cols-3 md:gap-8" data-slider-track>
+            
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Mekke Otel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1b4332/d4af37?text=Mekke+Otel'">
+                    <div class="absolute bottom-3 left-3 bg-emeraldBrand text-white text-xs px-3 py-1 rounded-lg font-semibold">
+                        <i class="fa-solid fa-location-dot text-goldBrand mr-1"></i> Mekke-i Mükerreme
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-goldBrand text-sm mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-gray-900">Swissôtel Makkah</h3>
+                    <p class="text-gray-600 text-sm mt-2">Abraj Al Bait kompleksinde yer alan, Kabe manzaralı lüks odalar ve üstün hizmet kalitesi.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Medine Otel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1b4332/d4af37?text=Medine+Otel'">
+                    <div class="absolute bottom-3 left-3 bg-emeraldBrand text-white text-xs px-3 py-1 rounded-lg font-semibold">
+                        <i class="fa-solid fa-location-dot text-goldBrand mr-1"></i> Medine-i Münevvere
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-goldBrand text-sm mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-gray-900">Pullman Zamzam Madina</h3>
+                    <p class="text-gray-600 text-sm mt-2">Mescid-i Nebevi'ye sadece birkaç adım mesafede, huzurlu ve modern tasarımlı odalar.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Konfor Otel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1b4332/d4af37?text=Konfor+Otel'">
+                    <div class="absolute bottom-3 left-3 bg-emeraldBrand text-white text-xs px-3 py-1 rounded-lg font-semibold">
+                        <i class="fa-solid fa-location-dot text-goldBrand mr-1"></i> Merkezi Konum
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-goldBrand text-sm mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-gray-900">Dar Al Taqwa Hotel</h3>
+                    <p class="text-gray-600 text-sm mt-2">Medine'nin kalbinde, ibadet alanlarına doğrudan geçiş imkanı sunan seçkin otel deneyimi.</p>
+                </div>
+            </div>
+
+            </div>
+            <button type="button" class="m-slider-btn m-slider-next" data-slider-next aria-label="Sonraki"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="m-slider-dots" data-slider-dots></div>
+        </div>
+    </section>
+
+    <!-- Neden Biz? -->
+    <section id="neden-biz" class="py-20 bg-emeraldBrand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-goldBrand font-semibold tracking-wider text-sm uppercase bg-goldBrand/10 px-3 py-1 rounded-full border border-goldBrand/20" data-cms="reasonsSection.badge">Güvenilir Rehberlik</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-3" data-cms="reasonsSection.title">Neden Meryem Aşık Turizm?</h2>
+                <p class="text-gray-300 mt-4 text-base sm:text-lg" data-cms="reasonsSection.subtitle">Kutsal yolculuğunuzun her anında huzur ve konforunuz için titizlikle çalışıyoruz.</p>
+            </div>
+
+            <div class="m-slider-wrap" data-slider data-tone="dark">
+                <button type="button" class="m-slider-btn m-slider-prev" data-slider-prev aria-label="Önceki"><i class="fa-solid fa-chevron-left"></i></button>
+                <div id="reason-grid" class="m-slider md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8" data-slider-track>
+                
+                <div class="bg-emeraldBrand/40 border border-goldBrand/20 p-8 rounded-3xl backdrop-blur-md hover:border-goldBrand transition-all group">
+                    <div class="w-14 h-14 rounded-2xl gold-gradient flex items-center justify-center text-emeraldBrand-dark text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-2">Güvenilirlik & Lisans</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">TÜRSAB onaylı A grubu seyahat acentası güvencesiyle resmi ve sorunsuz organizasyonlar.</p>
+                </div>
+
+                <div class="bg-emeraldBrand/40 border border-goldBrand/20 p-8 rounded-3xl backdrop-blur-md hover:border-goldBrand transition-all group">
+                    <div class="w-14 h-14 rounded-2xl gold-gradient flex items-center justify-center text-emeraldBrand-dark text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-2">Ehil Rehberler</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Alanında uzman ilim insanları ve tecrübeli hocalarımız eşliğinde bilinçli ibadet imkanı.</p>
+                </div>
+
+                <div class="bg-emeraldBrand/40 border border-goldBrand/20 p-8 rounded-3xl backdrop-blur-md hover:border-goldBrand transition-all group">
+                    <div class="w-14 h-14 rounded-2xl gold-gradient flex items-center justify-center text-emeraldBrand-dark text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-2">Seçkin Konaklama</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Mescid-i Haram ve Mescid-i Nebevi'ye yakın, konforlu ve hijyenik otellerde dinlenme fırsatı.</p>
+                </div>
+
+                <div class="bg-emeraldBrand/40 border border-goldBrand/20 p-8 rounded-3xl backdrop-blur-md hover:border-goldBrand transition-all group">
+                    <div class="w-14 h-14 rounded-2xl gold-gradient flex items-center justify-center text-emeraldBrand-dark text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-2">7/24 Canlı Destek</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Yolculuk öncesinden Türkiye’ye dönüşünüze kadar her aşamada yanınızda olan destek ekibi.</p>
+                </div>
+
+                </div>
+                <button type="button" class="m-slider-btn m-slider-next" data-slider-next aria-label="Sonraki"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="m-slider-dots" data-slider-dots></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-emeraldBrand-dark" data-cms="gallerySection.title">Galeri</h2>
+            <p class="text-gray-600 mt-4 text-base sm:text-lg" data-cms="gallerySection.subtitle"></p>
+        </div>
+
+        <div class="m-slider-wrap" data-slider>
+            <button type="button" class="m-slider-btn m-slider-prev" data-slider-prev aria-label="Önceki"><i class="fa-solid fa-chevron-left"></i></button>
+            <div id="gallery-grid" class="m-slider md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6" data-slider-track>
+            <button type="button" class="group rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-goldBrand" onclick="openGallery('img/1.jpg', '12 Kasım çıkışlı 14 günlük umre')">
+                <img src="img/1.jpg" alt="12 Kasım çıkışlı 14 günlük umre" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </button>
+            <button type="button" class="group rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-goldBrand" onclick="openGallery('img/2.jpg', '14 Ekim çıkışlı 10 günlük umre turu')">
+                <img src="img/2.jpg" alt="14 Ekim çıkışlı 10 günlük umre turu" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </button>
+            <button type="button" class="group rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-goldBrand" onclick="openGallery('img/il72h8.jpg', '27 Kasım çıkışlı umre turu')">
+                <img src="img/il72h8.jpg" alt="27 Kasım çıkışlı umre turu" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </button>
+            <button type="button" class="group rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-white focus:outline-none focus:ring-2 focus:ring-goldBrand" onclick="openGallery('img/u3w8we.jpg', 'Sakarya Rizeliler Derneği iş birliği')">
+                <img src="img/u3w8we.jpg" alt="Sakarya Rizeliler Derneği iş birliği" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </button>
+            </div>
+            <button type="button" class="m-slider-btn m-slider-next" data-slider-next aria-label="Sonraki"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="m-slider-dots" data-slider-dots></div>
+        </div>
+    </section>
+
+    <!-- Sıkça Sorulan Sorular (SSS / FAQ) -->
+    <section id="sss" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-emeraldBrand font-semibold tracking-wider text-sm uppercase bg-emeraldBrand-pale px-3 py-1 rounded-full" data-cms="faqSection.badge">Merak Edilenler</span>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-emeraldBrand-dark mt-3" data-cms="faqSection.title">Sıkça Sorulan Sorular</h2>
+            <p class="text-gray-600 mt-4 text-base sm:text-lg" data-cms="faqSection.subtitle">Hac ve umre turlarımız hakkında misafirlerimizden en sık aldığımız sorular ve yanıtları.</p>
+        </div>
+
+        <div id="faq-list" class="space-y-4">
+            
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all">
+                <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left font-semibold text-gray-900 flex items-center justify-between focus:outline-none">
+                    <span class="text-base sm:text-lg flex items-center">
+                        <i class="fa-solid fa-circle-question text-goldBrand mr-3 text-xl"></i>
+                        Umre vizesi için hangi evraklar gereklidir?
+                    </span>
+                    <i id="faq-icon-1" class="fa-solid fa-chevron-down text-emeraldBrand transition-transform duration-300"></i>
+                </button>
+                <div id="faq-content-1" class="hidden px-6 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100 pt-4">
+                    Umre vizesi için en az 1 yıl geçerli pasaport, biyometrik fotoğraf ve aşı kartı yeterlidir. Vize işlemleri secentamız tarafından profesyonelce yürütülmekte olup, sizden sadece evraklarınızı ofisimize ulaştırmanız istenmektedir.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all">
+                <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left font-semibold text-gray-900 flex items-center justify-between focus:outline-none">
+                    <span class="text-base sm:text-lg flex items-center">
+                        <i class="fa-solid fa-circle-question text-goldBrand mr-3 text-xl"></i>
+                        Otellerimiz Harem-i Şerif'e ne kadar uzaklıkta?
+                    </span>
+                    <i id="faq-icon-2" class="fa-solid fa-chevron-down text-emeraldBrand transition-transform duration-300"></i>
+                </button>
+                <div id="faq-content-2" class="hidden px-6 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100 pt-4">
+                    Paketlerimize bağlı olarak otellerimiz Mekke'de Kabe'ye yürüme mesafesinde (veya klimalı shuttle servis imkanı olan) ve Medine'de Mescid-i Nebevi'nin hemen yanında yer almaktadır. Detaylar tur programlarımızda açıkça belirtilmektedir.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all">
+                <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left font-semibold text-gray-900 flex items-center justify-between focus:outline-none">
+                    <span class="text-base sm:text-lg flex items-center">
+                        <i class="fa-solid fa-circle-question text-goldBrand mr-3 text-xl"></i>
+                        Tur boyunca rehberlik hizmeti veriliyor mu?
+                    </span>
+                    <i id="faq-icon-3" class="fa-solid fa-chevron-down text-emeraldBrand transition-transform duration-300"></i>
+                </button>
+                <div id="faq-content-3" class="hidden px-6 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100 pt-4">
+                    Evet, Türkiye'den hareketimizden itibaren deneyirli din görevlileri ve tur rehberlerimiz tüm ibadetlerinizde (umre, tavaf, sa'y vb.) ve tarihi mekan ziyaretlerinizde birebir yanınızda rehberlik etmektedir.
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all">
+                <button onclick="toggleFaq(4)" class="w-full px-6 py-5 text-left font-semibold text-gray-900 flex items-center justify-between focus:outline-none">
+                    <span class="text-base sm:text-lg flex items-center">
+                        <i class="fa-solid fa-circle-question text-goldBrand mr-3 text-xl"></i>
+                        Ödeme ve taksit imkanları nelerdir?
+                    </span>
+                    <i id="faq-icon-4" class="fa-solid fa-chevron-down text-emeraldBrand transition-transform duration-300"></i>
+                </button>
+                <div id="faq-content-4" class="hidden px-6 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100 pt-4">
+                    Kredi kartlarına anlaşmalı bankalar aracılığıyla taksit imkanlarımız mevcuttur. Ayrıca erken kayıt dönemlerinde özel indirimler ve nakit ödeme kolaylıkları sunulmaktadır.
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all">
+                <button onclick="toggleFaq(5)" class="w-full px-6 py-5 text-left font-semibold text-gray-900 flex items-center justify-between focus:outline-none">
+                    <span class="text-base sm:text-lg flex items-center">
+                        <i class="fa-solid fa-circle-question text-goldBrand mr-3 text-xl"></i>
+                        Çocuklu aileler için özel indirimler var mı?
+                    </span>
+                    <i id="faq-icon-5" class="fa-solid fa-chevron-down text-emeraldBrand transition-transform duration-300"></i>
+                </button>
+                <div id="faq-content-5" class="hidden px-6 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100 pt-4">
+                    Evet, yaş gruplarına göre bebek ve çocuk misafirlerimiz için özel indirimli fiyat tarifelerimiz uygulanmaktadır. Detaylı bilgi için müşteri temsilcilerimizle görüşebilirsiniz.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Google İşletme Yorumları (Google Business Reviews) -->
+    <section id="yorumlar" class="py-20 bg-emeraldBrand-pale/50 border-y border-emeraldBrand/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12 text-center md:text-left">
+                <div>
+                    <span class="text-emeraldBrand font-semibold tracking-wider text-sm uppercase bg-white px-3 py-1 rounded-full border border-emeraldBrand/20" data-cms="reviewsSection.badge">Misafir Deneyimleri</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-emeraldBrand-dark mt-3" data-cms="reviewsSection.title">Google İşletme Yorumları</h2>
+                    <p class="text-gray-600 mt-2" data-cms="reviewsSection.subtitle">Kutsal topraklara bizimle giden misafirlerimizin gerçek Google değerlendirmeleri.</p>
+                </div>
+                <div class="mt-6 md:mt-0 bg-white px-6 py-4 rounded-2xl shadow-md border border-gray-200 flex items-center space-x-4">
+                    <div class="text-3xl">
+                        <i class="fa-brands fa-google text-blue-500"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-1 text-goldBrand text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="font-bold text-gray-800 ml-1" data-cms="reviewsSection.score">4.9 / 5.0</span>
+                        </div>
+                        <span class="text-xs text-gray-500" data-cms="reviewsSection.count">350+ Google Değerlendirmesi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="m-slider-wrap" data-slider>
+                <button type="button" class="m-slider-btn m-slider-prev" data-slider-prev aria-label="Önceki"><i class="fa-solid fa-chevron-left"></i></button>
+                <div id="review-grid" class="m-slider md:grid md:grid-cols-3 md:gap-8" data-slider-track>
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-between relative">
+                    <div class="absolute top-6 right-6 text-gray-200 text-3xl">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-1 text-goldBrand text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+                            "Meryem Aşık Turizm ile ilk kez umreye gittim. Havalimanı karşılamasından otel yerleşimine, hocalarımızın ilmi sohbetlerinden rehberliğe kadar her şey kusursuzdu. Allah razı olsun."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-emeraldBrand text-white font-serif font-bold flex items-center justify-center text-sm">
+                            İA
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">İbrahim Aksoy</h4>
+                            <span class="text-xs text-gray-400">Google Yorumcusu • 2 ay önce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-between relative">
+                    <div class="absolute top-6 right-6 text-gray-200 text-3xl">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-1 text-goldBrand text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+                            "Annem ve babam için 5 yıldızlı umre turunu tercih ettik. Otellerin Kabe'ye ve Mescid-i Nebevi'ye yakınlığı yaşlı anne babam için inanılmaz kolaylık sağladı. Kesinlikle tavsiye ederim."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-emeraldBrand text-white font-serif font-bold flex items-center justify-center text-sm">
+                            ZŞ
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Zeynep Şahin</h4>
+                            <span class="text-xs text-gray-400">Google Yorumcusu • 4 ay önce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-between relative">
+                    <div class="absolute top-6 right-6 text-gray-200 text-3xl">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-1 text-goldBrand text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed italic mb-6">
+                            "Ekip o kadar ilgiliydi ki her sorumuza anında yanıt bulduk. Özellikle hocalarımızın tavırları ve manevi rehberlikleri yolculuğumuzu çok daha anlamlı kıldı. Teşekkürler Meryem Aşık Turizm."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-emeraldBrand text-white font-serif font-bold flex items-center justify-center text-sm">
+                            MK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Mehmet Kaya</h4>
+                            <span class="text-xs text-gray-400">Google Yorumcusu • 6 ay önce</span>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <button type="button" class="m-slider-btn m-slider-next" data-slider-next aria-label="Sonraki"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="m-slider-dots" data-slider-dots></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Formu & Bilgileri -->
+    <section id="iletisim" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            
+            <!-- Contact Info -->
+            <div class="space-y-8">
+                <div>
+                    <span class="text-emeraldBrand font-semibold tracking-wider text-sm uppercase bg-emeraldBrand-pale px-3 py-1 rounded-full" data-cms="contact.badge">Bize Ulaşın</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-emeraldBrand-dark mt-3" data-cms="contact.title">Kutsal Yolculuğunuz İçin İlk Adımı Atın</h2>
+                    <p class="text-gray-600 mt-4 text-base" data-cms="contact.subtitle">Sorularınız, tur paketlerimiz ve erken kayıt avantajları hakkında bilgi almak için bizimle iletişime geçin.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emeraldBrand text-goldBrand flex items-center justify-center text-xl shrink-0 shadow-md">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-lg" data-cms="contact.officeTitle">Merkez Ofis</h3>
+                            <p class="text-gray-600 text-sm mt-1" data-cms="brand.address">Hürriyet Cad. No: 145/A Fatih / İstanbul</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emeraldBrand text-goldBrand flex items-center justify-center text-xl shrink-0 shadow-md">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-lg" data-cms="contact.phoneTitle">Telefon / WhatsApp</h3>
+                            <p class="text-gray-600 text-sm mt-1"><a href="tel:+905395113626" data-cms-tel data-cms="brand.phoneContact" class="hover:text-emeraldBrand">+90 539 511 36 26</a></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emeraldBrand text-goldBrand flex items-center justify-center text-xl shrink-0 shadow-md">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-lg" data-cms="contact.emailTitle">E-Posta</h3>
+                            <p class="text-gray-600 text-sm mt-1"><a href="mailto:bilgi@meryemasikturizm.com" data-cms-mail class="hover:text-emeraldBrand">bilgi@meryemasikturizm.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 hidden lg:flex items-center space-x-4">
+                    <a href="#" data-cms-href="social.facebook" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-emeraldBrand text-white flex items-center justify-center hover:bg-emeraldBrand-dark transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" data-cms-href="social.instagram" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-emeraldBrand text-white flex items-center justify-center hover:bg-emeraldBrand-dark transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/905395113626" data-cms-href="social.whatsapp" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-emeraldBrand text-white flex items-center justify-center hover:bg-emeraldBrand-dark transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white p-5 sm:p-10 rounded-3xl shadow-xl border border-gray-100">
+                <h3 class="text-2xl font-serif font-bold text-emeraldBrand-dark mb-6" data-cms="contact.formTitle">Bilgi & Kayıt Formu</h3>
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Adınız Soyadınız</label>
+                        <input type="text" id="form-name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emeraldBrand text-sm" placeholder="Ahmet Yılmaz">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Telefon Numarası</label>
+                        <input type="tel" id="form-phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emeraldBrand text-sm" placeholder="05XX XXX XX XX">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">İlgilendiğiniz Tur</label>
+                        <select id="form-tour" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emeraldBrand text-sm bg-white">
+                            <option>Lüks 5 Yıldızlı Umre Turu</option>
+                            <option>Ekonomik Umre Paketi</option>
+                            <option>3 Harem (Kudüs & Umre)</option>
+                            <option>Hac Organizasyonu</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Mesajınız / Sorunuz</label>
+                        <textarea id="form-message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emeraldBrand text-sm" placeholder="Katılmak istediğiniz tarih ve kişi sayısı..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold py-4 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>WhatsApp ile Gönder</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="flex lg:hidden items-center justify-center space-x-4">
+                <a href="#" data-cms-href="social.facebook" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-emeraldBrand text-white flex items-center justify-center hover:bg-emeraldBrand-dark transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" data-cms-href="social.instagram" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-emeraldBrand text-white flex items-center justify-center hover:bg-emeraldBrand-dark transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/905395113626" data-cms-href="social.whatsapp" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-emeraldBrand text-white flex items-center justify-center hover:bg-emeraldBrand-dark transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emeraldBrand-dark text-white pt-16 pb-12 border-t border-emeraldBrand/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mb-10 lg:mb-12">
+                
+                <div class="col-span-2 md:col-span-1 space-y-4 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-3">
+                        <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-emeraldBrand-dark shadow-md">
+                            <i class="fa-solid fa-kaaba text-lg"></i>
+                        </div>
+                        <span class="text-xl font-serif font-bold text-white" data-cms="brand.name">Meryem Aşık</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-cms="brand.footerText">
+                        Hac, umre ve kültür turlarınızda güvenin, huzurun ve tecrübenin buluştuğu adres.
+                    </p>
+                    <div class="flex flex-row items-center justify-center md:justify-start gap-3 pt-1">
+                        <img src="img/logo.jpg" data-cms-src="brand.logo" alt="Meryem Aşık Turizm logosu" class="w-20 h-20 object-contain">
+                        <img src="img/logo2.png" data-cms-src="brand.logo2" alt="Dark Media Agency" class="w-40 h-auto" style="object-view-box: inset(36% 20% 36% 21%);">
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-goldBrand font-semibold text-base mb-4 font-serif" data-cms="footer.quickTitle">Hızlı Linkler</h4>
+                    <ul id="footer-links" class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#anasayfa" class="hover:text-goldBrand transition-colors">Anasayfa</a></li>
+                        <li><a href="#hakkimizda" class="hover:text-goldBrand transition-colors">Hakkımızda</a></li>
+                        <li><a href="#turlar" class="hover:text-goldBrand transition-colors">Turlarımız</a></li>
+                        <li><a href="#neden-biz" class="hover:text-goldBrand transition-colors">Neden Biz</a></li>
+                        <li><a href="#sss" class="hover:text-goldBrand transition-colors">SSS</a></li>
+                        <li><a href="#yorumlar" class="hover:text-goldBrand transition-colors">Yorumlar</a></li>
+                        <li><a href="#iletisim" class="hover:text-goldBrand transition-colors">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-goldBrand font-semibold text-base mb-4 font-serif" data-cms="footer.toursTitle">Tur Paketleri</h4>
+                    <ul id="footer-tours" class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#turlar" class="hover:text-goldBrand transition-colors">Lüks Umre Turu</a></li>
+                        <li><a href="#turlar" class="hover:text-goldBrand transition-colors">Ekonomik Umre Paketi</a></li>
+                        <li><a href="#turlar" class="hover:text-goldBrand transition-colors">Kudüs & Umre Turu</a></li>
+                        <li><a href="#turlar" class="hover:text-goldBrand transition-colors">Özel Hac Programı</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 md:col-span-1 text-center md:text-left">
+                    <h4 class="text-goldBrand font-semibold text-base mb-4 font-serif" data-cms="footer.legalTitle">Yasal & Güven</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4" data-cms="footer.legalText">
+                        TÜRSAB A Grubu Seyahat Acentası Belge No: 00000. Tüm hac ve umre organizasyonlarımız Diyanet İşleri Başkanlığı denetimindedir.
+                    </p>
+                    <div class="flex items-center justify-center md:justify-start space-x-2 text-goldBrand text-xs font-semibold">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span data-cms="footer.certified">Resmi Onaylı Acenta</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-emeraldBrand/40 pt-8 grid grid-cols-1 lg:grid-cols-3 items-center gap-4 text-xs text-gray-400">
+                <p class="text-center lg:text-left" data-cms="footer.copyright">© 2026 Meryem Aşık Turizm. Tüm hakları saklıdır.</p>
+                <p class="text-center text-[11px] text-gray-500">
+                    <span data-cms="footer.creditBefore">Bu web sitesi </span><span class="text-goldBrand font-semibold tracking-wide" data-cms="footer.creditName">Dark Media Agency</span><span data-cms="footer.creditAfter"> tarafından hazırlanmıştır.</span>
+                </p>
+                <div id="footer-legal" class="flex flex-wrap justify-center lg:justify-end gap-x-6 gap-y-2">
+                    <a href="#" class="hover:text-goldBrand transition-colors">Gizlilik Politikası</a>
+                    <a href="#" class="hover:text-goldBrand transition-colors">Kullanım Şartları</a>
+                    <a href="#" class="hover:text-goldBrand transition-colors">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Galeri Lightbox -->
+    <div id="gallery-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm items-center justify-center p-4" onclick="closeGallery(event)">
+        <button type="button" onclick="closeGallery()" class="absolute top-4 right-4 text-white hover:text-goldBrand w-10 h-10 rounded-full bg-white/10 flex items-center justify-center" aria-label="Galeriyi kapat">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        <figure class="max-w-5xl w-full" onclick="event.stopPropagation()">
+            <img id="gallery-image" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl">
+            <figcaption id="gallery-caption" class="text-center text-white font-serif text-lg mt-4"></figcaption>
+        </figure>
+    </div>
+
+    <!-- Modal Dialog -->
+    <div id="tour-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative animate-fadeIn">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 rounded-2xl gold-gradient flex items-center justify-center text-emeraldBrand-dark text-xl mb-4">
+                <i class="fa-solid fa-kaaba"></i>
+            </div>
+            <h3 id="modal-title" class="text-2xl font-serif font-bold text-emeraldBrand-dark">Kayıt Talebi</h3>
+            <p class="text-gray-600 text-sm mt-2">Seçtiğiniz tur için ön kayıt oluşturmak veya detaylı bilgi almak amacıyla bilgilerinizi bırakın.</p>
+            
+            <form onsubmit="handleModalSubmit(event)" class="mt-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-1">Ad Soyad</label>
+                    <input type="text" id="modal-name" required class="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-emeraldBrand" placeholder="Adınız Soyadınız">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-1">Telefon</label>
+                    <input type="tel" id="modal-phone" required class="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-emeraldBrand" placeholder="05XX XXX XX XX">
+                </div>
+                <button type="submit" class="w-full gold-gradient text-emeraldBrand-dark font-bold py-3 rounded-xl shadow-md text-sm mt-2">
+                    Talebi Tamamla
+                </button>
+            </form>
+            <div id="modal-success" class="hidden text-center text-emeraldBrand font-semibold text-sm mt-4">
+                Talebiniz başarıyla alınmıştır! En kısa sürede aranacaksınız.
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            menuIcon.classList.toggle('fa-bars', !open);
+            menuIcon.classList.toggle('fa-xmark', open);
+            menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            menuBtn.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+        }
+
+        menuBtn.addEventListener('click', () => {
+            setMobileMenu(mobileMenu.classList.contains('hidden'));
+        });
+
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target.closest('a')) setMobileMenu(false);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 40) {
+                header.classList.add('shadow-xl', 'bg-emeraldBrand-dark/98');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
+        });
+
+        function openGallery(src, caption) {
+            const modal = document.getElementById('gallery-modal');
+            const image = document.getElementById('gallery-image');
+            const label = document.getElementById('gallery-caption');
+            image.src = src;
+            image.alt = caption;
+            label.textContent = caption;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeGallery(event) {
+            if (event && event.target !== event.currentTarget) return;
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeGallery();
+        });
+
+        // FAQ Accordion Toggle Function
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Modal Functions
+        function openModal(tourName) {
+            const modal = document.getElementById('tour-modal');
+            const modalTitle = document.getElementById('modal-title');
+            modalTitle.innerText = tourName + " - Kayıt";
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('tour-modal');
+            modal.classList.add('hidden');
+            document.getElementById('modal-success').classList.add('hidden');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('modal-name').value.trim();
+            const phone = document.getElementById('modal-phone').value.trim();
+            const tour = document.getElementById('modal-title').textContent.replace(/\s*-\s*Kayıt$/, '');
+            if (window.saveLead) {
+                window.saveLead({ name: name, phone: phone, tour: tour, message: '', source: 'Kayıt Ol / Bilgi Al' });
+            }
+            const successMsg = document.getElementById('modal-success');
+            successMsg.classList.remove('hidden');
+            setTimeout(() => {
+                closeModal();
+            }, 2500);
+        }
+
+        // İletişim formu: girilen bilgilerle işletmenin WhatsApp sohbetini açar
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const tour = document.getElementById('form-tour').value.trim();
+            const message = document.getElementById('form-message').value.trim();
+            const lines = [
+                'Merhaba, Meryem Aşık Turizm web sitesinden bilgi almak istiyorum.',
+                '',
+                'Ad Soyad: ' + name,
+                'Telefon: ' + phone,
+                'İlgilendiğim Tur: ' + tour
+            ];
+            if (message) {
+                lines.push('Mesaj: ' + message);
+            }
+            if (window.saveLead) {
+                window.saveLead({ name: name, phone: phone, tour: tour, message: message, source: 'İletişim Formu' });
+            }
+            const digits = (document.querySelector('[data-cms-wa]') && document.querySelector('[data-cms-wa]').href.match(/wa\.me\/(\d+)/) || [])[1] || '905395113626';
+            const url = 'https://wa.me/' + digits + '?text=' + encodeURIComponent(lines.join('\n'));
+            window.open(url, '_blank', 'noopener');
+        }
+
+        function mountPhoneSliders() {
+            document.querySelectorAll('[data-slider]').forEach(function (wrap) {
+                var track = wrap.querySelector('[data-slider-track]');
+                var dots = wrap.querySelector('[data-slider-dots]');
+                var prev = wrap.querySelector('[data-slider-prev]');
+                var next = wrap.querySelector('[data-slider-next]');
+                if (!track || !dots) return;
+                var slides = Array.prototype.slice.call(track.children);
+                dots.innerHTML = '';
+                var buttons = slides.map(function (_, index) {
+                    var button = document.createElement('button');
+                    button.type = 'button';
+                    button.setAttribute('aria-label', (index + 1) + '. slayt');
+                    button.addEventListener('click', function () { go(index); });
+                    dots.appendChild(button);
+                    return button;
+                });
+                function currentIndex() {
+                    var left = track.scrollLeft;
+                    var best = 0;
+                    var bestDist = Infinity;
+                    slides.forEach(function (slide, index) {
+                        var dist = Math.abs(slide.offsetLeft - track.offsetLeft - left);
+                        if (dist < bestDist) {
+                            bestDist = dist;
+                            best = index;
+                        }
+                    });
+                    return best;
+                }
+                function paint(index) {
+                    buttons.forEach(function (button, i) {
+                        button.classList.toggle('is-active', i === index);
+                    });
+                    var single = slides.length < 2;
+                    if (prev) prev.disabled = single || index <= 0;
+                    if (next) next.disabled = single || index >= slides.length - 1;
+                    wrap.classList.toggle('m-slider-single', single);
+                }
+                function go(index) {
+                    var slide = slides[Math.max(0, Math.min(slides.length - 1, index))];
+                    if (!slide) return;
+                    track.scrollTo({ left: slide.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+                }
+                track._sliderApi = { go: go, paint: paint, currentIndex: currentIndex };
+                if (!track.dataset.sliderBound) {
+                    track.dataset.sliderBound = '1';
+                    var ticking = false;
+                    track.addEventListener('scroll', function () {
+                        var api = track._sliderApi;
+                        if (!api || ticking) return;
+                        ticking = true;
+                        requestAnimationFrame(function () {
+                            api.paint(api.currentIndex());
+                            ticking = false;
+                        });
+                    }, { passive: true });
+                    if (prev) prev.addEventListener('click', function () {
+                        var api = track._sliderApi;
+                        if (api) api.go(api.currentIndex() - 1);
+                    });
+                    if (next) next.addEventListener('click', function () {
+                        var api = track._sliderApi;
+                        if (api) api.go(api.currentIndex() + 1);
+                    });
+                }
+                paint(currentIndex());
+            });
+        }
+        window.mountPhoneSliders = mountPhoneSliders;
+        mountPhoneSliders();
+    </script>
+    <div id="tw-safelist" class="hidden" aria-hidden="true">
+        <span class="fixed inset-0 z-[200] overflow-y-auto overflow-x-auto bg-[#f4f6f3] min-h-screen max-w-md max-h-40 md:col-span-2 md:grid-cols-2 lg:grid-cols-[220px_1fr] lg:grid-cols-[260px_1fr] lg:sticky lg:top-0 lg:h-screen flex flex-col flex-1 min-h-0 mt-auto border-dashed border-collapse align-top bg-red-50 text-red-600 text-red-700 bg-white/10 hover:bg-white/10 hover:bg-red-50 text-white/80 text-gray-400 text-gray-500 text-gray-800 text-gray-900 whitespace-nowrap px-3 px-4 py-1 py-2 py-2.5 py-3 pl-8 pr-3 mb-2 mb-3 mb-4 mb-5 mt-1 mt-2 mt-3 mt-4 mt-6 pt-1 pt-4 pb-4 gap-2 gap-3 shrink-0 bg-emeraldBrand bg-emeraldBrand-pale text-emeraldBrand font-semibold font-bold justify-center justify-between border-t border-white/10 border-white/20 border-goldBrand/40 border-gray-100 hover:bg-goldBrand hover:text-emeraldBrand-dark transition-colors transition-transform -rotate-90 rotate-180 text-xs space-y-1 space-y-2 mr-2 w-16 h-16 inline-flex cursor-pointer min-w-0 truncate rounded-full overflow-hidden"></span>
+    </div>
+    <script src="cms.js?v=routes"></script>
+</body>
+</html>
