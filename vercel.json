@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/anasayfa", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" }
+  ]
+}
