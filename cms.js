@@ -1,5 +1,13 @@
 (function () {
-  const API = (location.port === '8787') ? '' : 'http://127.0.0.1:8787';
+  // Same-origin behind nginx/production and on :8787.
+  // Only hit local API when the page is opened from another local port (static preview).
+  const isLocalAlternatePort =
+    (location.hostname === '127.0.0.1' || location.hostname === 'localhost') &&
+    location.port &&
+    location.port !== '8787' &&
+    location.port !== '80' &&
+    location.port !== '443';
+  const API = isLocalAlternatePort ? 'http://127.0.0.1:8787' : '';
   const TOKEN_KEY = 'mt-admin-token';
   let draft = null;
   let dirty = false;
