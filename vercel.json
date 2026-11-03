@@ -2,5 +2,8 @@
   "rewrites": [
     { "source": "/anasayfa", "destination": "/index.html" },
     { "source": "/admin", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/turlar", "destination": "/anasayfa#turlar", "permanent": false }
   ]
 }

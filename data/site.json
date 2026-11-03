@@ -23,11 +23,11 @@
   "nav": [
     {
       "label": "Anasayfa",
-      "href": "#anasayfa"
+      "href": "/anasayfa"
     },
     {
       "label": "Hakkımızda",
-      "href": "#hakkimizda"
+      "href": "/anasayfa#hakkimizda"
     },
     {
       "label": "Turlarımız",
@@ -35,19 +35,19 @@
     },
     {
       "label": "Neden Biz",
-      "href": "#neden-biz"
+      "href": "/anasayfa#neden-biz"
     },
     {
       "label": "SSS",
-      "href": "#sss"
+      "href": "/anasayfa#sss"
     },
     {
       "label": "Yorumlar",
-      "href": "#yorumlar"
+      "href": "/anasayfa#yorumlar"
     },
     {
       "label": "İletişim",
-      "href": "#iletisim"
+      "href": "/anasayfa#iletisim"
     }
   ],
   "cta": {
@@ -56,7 +56,7 @@
     "href": "#iletisim"
   },
   "hero": {
-    "bgImage": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1920&q=80",
+    "bgImage": "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1920&q=80",
     "titleBefore": "Kutsal Topraklara ",
     "titleHighlight": "Güvenli ve Huzurlu",
     "titleAfter": " Yolculuk",
@@ -82,7 +82,7 @@
     "video": "mt79po.mp4"
   },
   "toursSection": {
-    "title": "Öne Çıkan Tur Paketlerimiz",
+    "title": "Tur Paketlerimiz",
     "subtitle": "Her bütçe ve konfor beklentisine uygun, özenle planlanmış hac, umre ve kültür turlarımızı keşfedin."
   },
   "tours": [
@@ -127,6 +127,48 @@
       "hotel": "Seçkin Oteller",
       "meal": "Tam Pansiyon",
       "price": "$1.850"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Ramazan Umre Turu",
+      "badge": "Ramazan",
+      "badgeTone": "gold",
+      "duration": "15 Gün / 14 Gece",
+      "location": "Mekke & Medine",
+      "title": "Ramazan Umre Programı",
+      "description": "Mukaddes topraklarda Ramazan'ı yaşamak için planlanmış, teravih ve iftar organizasyonlu özel umre programı.",
+      "flight": "Türk Hava Yolları",
+      "hotel": "5 Yıldızlı Oteller",
+      "meal": "Sahur & İftar Dahil",
+      "price": "$1.950"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "VIP Hac Turu",
+      "badge": "VIP",
+      "badgeTone": "green",
+      "duration": "21 Gün / 20 Gece",
+      "location": "Mekke & Medine",
+      "title": "VIP Hac Organizasyonu",
+      "description": "Konforlu konaklama, özel transferler ve deneyimli rehberlik ile huzurlu bir hac ibadeti için hazırlanmış VIP paket.",
+      "flight": "Direkt Seferler",
+      "hotel": "Hilton Convention / Anwar Al Madinah",
+      "meal": "Tam Pansiyon",
+      "price": "$8.900"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Gençlik Umre Turu",
+      "badge": "Gençlik",
+      "badgeTone": "gold",
+      "duration": "8 Gün / 7 Gece",
+      "location": "Mekke & Medine",
+      "title": "Gençlik Umre Turu",
+      "description": "Genç misafirlere özel tempo, sohbet ve ziyaret programlarıyla kısa süreli, enerjik bir umre deneyimi.",
+      "flight": "Tarifeli Seferler",
+      "hotel": "Merkezi 4 Yıldızlı Oteller",
+      "meal": "Kahvaltı Dahil",
+      "price": "$990"
     }
   ],
   "hotelsSection": {
@@ -141,7 +183,8 @@
       "city": "Mekke-i Mükerreme",
       "stars": 5,
       "title": "Swissôtel Makkah",
-      "description": "Abraj Al Bait kompleksinde yer alan, Kabe manzaralı lüks odalar ve üstün hizmet kalitesi."
+      "description": "Abraj Al Bait kompleksinde yer alan, Kabe manzaralı lüks odalar ve üstün hizmet kalitesi.",
+      "googleUrl": "https://www.google.com/maps/search/?api=1&query=Swissotel%20Makkah"
     },
     {
       "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
@@ -149,7 +192,8 @@
       "city": "Medine-i Münevvere",
       "stars": 5,
       "title": "Pullman Zamzam Madina",
-      "description": "Mescid-i Nebevi'ye sadece birkaç adım mesafede, huzurlu ve modern tasarımlı odalar."
+      "description": "Mescid-i Nebevi'ye sadece birkaç adım mesafede, huzurlu ve modern tasarımlı odalar.",
+      "googleUrl": "https://www.google.com/maps/search/?api=1&query=Pullman%20Zamzam%20Madina"
     },
     {
       "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
@@ -157,7 +201,35 @@
       "city": "Merkezi Konum",
       "stars": 4,
       "title": "Dar Al Taqwa Hotel",
-      "description": "Medine'nin kalbinde, ibadet alanlarına doğrudan geçiş imkanı sunan seçkin otel deneyimi."
+      "description": "Medine'nin kalbinde, ibadet alanlarına doğrudan geçiş imkanı sunan seçkin otel deneyimi.",
+      "googleUrl": "https://www.google.com/maps/search/?api=1&query=Dar%20Al%20Taqwa%20Hotel%20Madina"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Hilton Makkah",
+      "city": "Mekke-i Mükerreme",
+      "stars": 5,
+      "title": "Hilton Suites Makkah",
+      "description": "Harem'e yakın konumu ve geniş suit odalarıyla lüks bir konaklama sunan seçkin otel.",
+      "googleUrl": "https://www.google.com/maps/search/?api=1&query=Hilton%20Suites%20Makkah"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Anwar Al Madinah",
+      "city": "Medine-i Münevvere",
+      "stars": 5,
+      "title": "Anwar Al Madinah Mövenpick",
+      "description": "Mescid-i Nebevi manzarasına yakın, ferah odalar ve üst düzey hizmet anlayışıyla öne çıkan otel.",
+      "googleUrl": "https://www.google.com/maps/search/?api=1&query=Anwar%20Al%20Madinah%20Movenpick"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80",
+      "imageAlt": "Makkah Clock Royal Tower",
+      "city": "Mekke-i Mükerreme",
+      "stars": 5,
+      "title": "Makkah Clock Royal Tower",
+      "description": "Abraj Al Bait içinde yer alan, Kabe'ye adım mesafesinde premium konaklama seçeneği.",
+      "googleUrl": "https://www.google.com/maps/search/?api=1&query=Makkah%20Clock%20Royal%20Tower"
     }
   ],
   "reasonsSection": {
